@@ -110,7 +110,7 @@ impl Connection {
                 Ok(i) => {
                     body = vec![0;i];
 
-                    let bytes_read = self.stream.read_exact(body.as_mut_slice()).await.expect("Problem reading body");
+                    let _bytes_read = self.stream.read_exact(body.as_mut_slice()).await.expect("Problem reading body");
                      
                 },
                 Err(_) => return Err(ParseError::MalformedRequest),
